@@ -1,0 +1,138 @@
+/**
+ * Brand Story & Hospitality Philosophy
+ * Communicates authentic brand positioning, material palette, and Bettiah context.
+ */
+
+.story-section {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-navy-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .story-grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--space-16);
+  }
+}
+
+.story-visual-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-emblem-card {
+  width: 100%;
+  max-width: 480px;
+  background: radial-gradient(circle at 50% 40%, rgba(23, 39, 65, 0.8), rgba(10, 19, 33, 0.95));
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  padding: var(--space-12) var(--space-8);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.story-emblem-card::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(201, 161, 90, 0.15);
+  border-radius: var(--radius-xs);
+  pointer-events: none;
+}
+
+.story-monogram-svg {
+  width: 130px;
+  height: 80px;
+  margin: 0 auto var(--space-6);
+  filter: drop-shadow(0 4px 16px rgba(201, 161, 90, 0.3));
+}
+
+.story-official-logo-frame {
+  display: inline-block;
+  margin: 0 auto var(--space-6);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(201, 161, 90, 0.2);
+}
+
+.story-official-logo-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.story-tagline-quote {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-style: italic;
+  color: var(--color-gold-light);
+  line-height: 1.35;
+  margin-bottom: var(--space-4);
+}
+
+.story-tagline-author {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-cream-muted);
+}
+
+/* Material Pillars */
+.story-pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+@media (min-width: 640px) {
+  .story-pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar-card {
+  background-color: rgba(23, 39, 65, 0.4);
+  border: 1px solid var(--border-faint);
+  border-radius: var(--radius-xs);
+  padding: var(--space-5);
+  transition: border-color var(--transition-fast);
+}
+
+.pillar-card:hover {
+  border-color: var(--border-gold);
+}
+
+.pillar-icon-box {
+  width: 32px;
+  height: 32px;
+  color: var(--color-champagne-gold);
+  margin-bottom: var(--space-3);
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-cream-beige);
+  margin-bottom: var(--space-2);
+}
+
+.pillar-desc {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-cream-muted);
+}

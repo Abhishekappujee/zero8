@@ -1,0 +1,91 @@
+/**
+ * ZERO8 Design System Tokens & Custom Properties
+ * Strictly compliant with official brand specifications.
+ */
+
+:root {
+  /* Official Brand Palette */
+  --color-midnight-navy: #101D32;
+  --color-navy-dark: #0A1321;
+  --color-navy-surface: #172741;
+  --color-navy-elevated: #1F3252;
+  --color-navy-card: rgba(23, 39, 65, 0.7);
+
+  --color-cream-beige: #E9D7BB;
+  --color-cream-light: #F7EFE1;
+  --color-cream-muted: rgba(233, 215, 187, 0.72);
+  --color-cream-faint: rgba(233, 215, 187, 0.12);
+
+  --color-champagne-gold: #C9A15A;
+  --color-gold-light: #E5CA92;
+  --color-gold-dark: #9F7A36;
+  --color-gold-muted: rgba(201, 161, 90, 0.55);
+  --color-gold-faint: rgba(201, 161, 90, 0.12);
+  --color-gold-glow: rgba(201, 161, 90, 0.25);
+
+  --color-soft-black: #151515;
+  --color-black-overlay: rgba(10, 19, 33, 0.82);
+  --color-pure-white: #FFFFFF;
+
+  /* Semantic UI Colors */
+  --bg-primary: var(--color-midnight-navy);
+  --bg-secondary: var(--color-navy-dark);
+  --bg-card: var(--color-navy-surface);
+  --text-primary: var(--color-cream-beige);
+  --text-secondary: var(--color-cream-muted);
+  --text-accent: var(--color-champagne-gold);
+  --border-gold: rgba(201, 161, 90, 0.28);
+  --border-faint: rgba(233, 215, 187, 0.12);
+
+  /* Typography Stacks */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Fluid Spacing Scale (4px base) */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* Layout */
+  --container-max-width: 1320px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+  --section-padding-y: clamp(4rem, 8vw, 8.5rem);
+
+  /* Border Radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
+  --shadow-gold: 0 0 30px rgba(201, 161, 90, 0.15);
+
+  /* Transitions */
+  --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-medium: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-Index Hierarchy */
+  --z-base: 1;
+  --z-card: 10;
+  --z-sticky: 100;
+  --z-header: 500;
+  --z-drawer: 800;
+  --z-modal: 1000;
+  --z-toast: 1100;
+}

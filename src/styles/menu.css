@@ -1,0 +1,238 @@
+/**
+ * Signature Culinary Menu Showcase
+ * Indian & Chinese gastronomic categories with explicit preview disclosure.
+ */
+
+.menu-section {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-midnight-navy);
+  position: relative;
+}
+
+/* Compliance / Anti-Hallucination Disclaimer Banner */
+.menu-disclaimer-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background-color: rgba(23, 39, 65, 0.6);
+  border: 1px solid var(--border-gold);
+  border-left: 4px solid var(--color-champagne-gold);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-10);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.disclaimer-icon {
+  color: var(--color-champagne-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.disclaimer-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+  margin-bottom: 4px;
+}
+
+.disclaimer-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-cream-muted);
+}
+
+/* Category Filter Tabs */
+.menu-nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-12);
+}
+
+.menu-tab-btn {
+  padding: 0.65rem 1.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cream-muted);
+  border: 1px solid var(--border-faint);
+  border-radius: var(--radius-full);
+  background-color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.menu-tab-btn:hover {
+  color: var(--color-cream-beige);
+  border-color: var(--border-gold);
+}
+
+.menu-tab-btn.is-active {
+  background-color: var(--color-champagne-gold);
+  color: var(--color-midnight-navy);
+  border-color: var(--color-champagne-gold);
+  box-shadow: 0 4px 14px rgba(201, 161, 90, 0.25);
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Menu Card */
+.menu-item-card {
+  display: flex;
+  gap: var(--space-4);
+  background-color: rgba(23, 39, 65, 0.55);
+  border: 1px solid rgba(201, 161, 90, 0.18);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  transition: transform var(--transition-medium), 
+              border-color var(--transition-medium), 
+              box-shadow var(--transition-medium);
+}
+
+.menu-item-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-champagne-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.menu-item-thumb-box {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-faint);
+}
+
+@media (min-width: 500px) {
+  .menu-item-thumb-box {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.menu-item-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.menu-item-card:hover .menu-item-thumb {
+  transform: scale(1.08);
+}
+
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.menu-item-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: 4px;
+}
+
+.menu-item-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-cream-beige);
+  line-height: 1.2;
+}
+
+.menu-item-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+/* Dietary Badges */
+.diet-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.diet-badge--veg {
+  color: #79D18D;
+  background-color: rgba(121, 209, 141, 0.12);
+  border: 1px solid rgba(121, 209, 141, 0.3);
+}
+
+.diet-badge--non-veg {
+  color: #E58273;
+  background-color: rgba(229, 130, 115, 0.12);
+  border: 1px solid rgba(229, 130, 115, 0.3);
+}
+
+.chef-badge {
+  font-size: 0.6875rem;
+  color: var(--color-champagne-gold);
+  border: 1px solid var(--border-gold);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.menu-item-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-cream-muted);
+  margin-top: 4px;
+}
+
+.menu-item-price-box {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.menu-item-price {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-champagne-gold);
+}
+
+.price-tag-sub {
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(233, 215, 187, 0.5);
+}

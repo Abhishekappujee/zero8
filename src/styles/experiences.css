@@ -1,0 +1,140 @@
+/**
+ * Two Signature Experiences: Indoor Restaurant & Rooftop Dining
+ * Asymmetric editorial composition with disciplined luxury spacing.
+ */
+
+.experiences-section {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-navy-dark);
+  position: relative;
+  border-top: 1px solid var(--border-faint);
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.section-intro-block {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto var(--space-16);
+}
+
+/* Experience Article Block */
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  margin-bottom: var(--space-20);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .experience-item {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+
+  .experience-item--reverse .experience-visual-col {
+    order: 2;
+  }
+
+  .experience-item--reverse .experience-text-col {
+    order: 1;
+  }
+}
+
+/* Visual Column & Framed Image */
+.experience-visual-col {
+  position: relative;
+}
+
+.experience-image-frame {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-gold);
+}
+
+.experience-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(16, 29, 50, 0.75) 100%);
+  pointer-events: none;
+}
+
+.experience-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.experience-image-frame:hover .experience-img {
+  transform: scale(1.04);
+}
+
+.experience-image-caption {
+  margin-top: var(--space-2);
+  font-size: 0.75rem;
+  color: rgba(233, 215, 187, 0.5);
+  font-style: italic;
+  text-align: right;
+}
+
+/* Text Column */
+.experience-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-category-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+  margin-bottom: var(--space-2);
+}
+
+.experience-title {
+  margin-bottom: var(--space-2);
+}
+
+.experience-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-gold-light);
+  font-weight: 400;
+  margin-bottom: var(--space-4);
+}
+
+.experience-desc {
+  margin-bottom: var(--space-6);
+  line-height: 1.75;
+}
+
+/* Highlights List */
+.experience-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  padding-left: 0;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.9375rem;
+  color: var(--color-cream-beige);
+}
+
+.highlight-icon {
+  color: var(--color-champagne-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}

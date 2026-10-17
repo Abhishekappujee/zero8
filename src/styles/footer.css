@@ -1,0 +1,179 @@
+/**
+ * Editorial Luxury Footer
+ * Official brand lockup, verified navigation, and restrained brand closing.
+ */
+
+.site-footer {
+  background-color: var(--color-navy-dark);
+  border-top: 1px solid var(--border-gold);
+  padding: var(--space-16) 0 var(--space-8);
+  position: relative;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .footer-top-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--space-12);
+  }
+}
+
+/* Brand Column */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer-logo-svg {
+  width: 140px;
+  height: auto;
+}
+
+.footer-brand-desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--color-cream-muted);
+  max-width: 42ch;
+}
+
+/* Links Columns */
+.footer-col-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-cream-beige);
+  margin-bottom: var(--space-4);
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-link {
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  color: var(--color-cream-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--color-champagne-gold);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-faint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(233, 215, 187, 0.5);
+}
+
+.footer-closing-statement {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--color-gold-light);
+}
+
+/* =========================================================================
+   Social Media Icons in Horizontal Style
+   ========================================================================= */
+
+.footer-social-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.footer-social-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+}
+
+.footer-social-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-gold);
+  background-color: rgba(23, 39, 65, 0.55);
+  color: var(--color-cream-beige);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-icon-btn:hover,
+.social-icon-btn:focus-visible {
+  background-color: var(--color-champagne-gold);
+  border-color: var(--color-champagne-gold);
+  color: var(--color-midnight-navy);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(201, 161, 90, 0.35);
+}
+
+.social-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.social-icon-btn:hover svg {
+  transform: scale(1.12);
+}
+
+/* Logo Frames */
+.footer-logo-frame {
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  max-width: 140px;
+  margin-bottom: var(--space-2);
+}
+
+.footer-logo-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}

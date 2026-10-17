@@ -1,0 +1,188 @@
+/**
+ * Cinematic Hero Section
+ * Controlled luxury contrast, ambient lighting, editorial typography, and scroll cue.
+ */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(80px + var(--space-12));
+  padding-bottom: var(--space-16);
+  background-color: var(--color-midnight-navy);
+  overflow: hidden;
+}
+
+/* Ambient Radial Lighting Overlay */
+.hero-ambient-glow {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 25%, rgba(201, 161, 90, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(23, 39, 65, 0.6) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(10, 19, 33, 0.95) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Watermark Monogram Background */
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(80vw, 680px);
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero Content Grid */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Monogram Badge / Official Logo Header */
+.hero-badge-monogram {
+  width: 60px;
+  height: 38px;
+  margin-bottom: var(--space-4);
+  filter: drop-shadow(0 4px 12px rgba(201, 161, 90, 0.25));
+}
+
+.hero-official-logo-frame {
+  display: inline-block;
+  margin-bottom: var(--space-6);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 28px rgba(201, 161, 90, 0.22);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.hero-official-logo-frame:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.65), 0 0 35px rgba(201, 161, 90, 0.3);
+}
+
+.hero-official-logo-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-tagline-eyebrow {
+  margin-bottom: var(--space-4);
+}
+
+.hero-headline {
+  margin-bottom: var(--space-6);
+}
+
+.hero-lead {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--color-cream-muted);
+  max-width: 68ch;
+  margin-bottom: var(--space-10);
+}
+
+/* Action Group */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+/* Subtle Hero Features Pill Bar */
+.hero-pill-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+  padding: var(--space-3) var(--space-6);
+  background-color: rgba(23, 39, 65, 0.45);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+}
+
+.hero-pill-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cream-beige);
+}
+
+.hero-pill-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-champagne-gold);
+}
+
+/* Scroll Cue */
+.hero-scroll-cue {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-cream-muted);
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.hero-scroll-cue:hover {
+  color: var(--color-champagne-gold);
+}
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(180deg, var(--color-champagne-gold), transparent);
+  animation: scrollPulse 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50.1% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}

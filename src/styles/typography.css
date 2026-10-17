@@ -1,0 +1,177 @@
+/**
+ * Typography System
+ * Editorial serif display paired with clean, highly legible contemporary sans-serif.
+ */
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Eyebrow / Section Category Tag */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+  margin-bottom: var(--space-3);
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--color-champagne-gold);
+  opacity: 0.75;
+}
+
+.eyebrow-no-line::before,
+.eyebrow-no-line::after {
+  display: none;
+}
+
+/* Display Titles */
+.display-hero {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 6.5vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: var(--color-cream-beige);
+  margin-bottom: var(--space-6);
+}
+
+.display-hero em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-gold-light);
+}
+
+.heading-section {
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 4vw, 3.35rem);
+  font-weight: 500;
+  line-height: 1.16;
+  color: var(--color-cream-beige);
+  margin-bottom: var(--space-4);
+}
+
+.heading-subsection {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-cream-beige);
+  margin-bottom: var(--space-3);
+}
+
+/* Body & Lead Copy */
+.lead-text {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--color-cream-muted);
+  max-width: 64ch;
+}
+
+.body-text {
+  font-size: 0.975rem;
+  line-height: 1.7;
+  color: var(--color-cream-muted);
+}
+
+.caption-text {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(233, 215, 187, 0.6);
+  letter-spacing: 0.02em;
+}
+
+/* Button & Link Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: 0.95rem 2.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-champagne-gold);
+  color: var(--color-midnight-navy);
+  border: 1px solid var(--color-champagne-gold);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 161, 90, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-cream-beige);
+  border: 1px solid var(--border-gold);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gold-faint);
+  border-color: var(--color-champagne-gold);
+  color: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--border-gold);
+  transition: all var(--transition-fast);
+}
+
+.btn-text:hover {
+  color: var(--color-gold-light);
+  border-bottom-color: var(--color-gold-light);
+  gap: var(--space-3);
+}
+
+/* Subtle Gold Divider Rule */
+.gold-divider {
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-champagne-gold), transparent);
+  margin: var(--space-6) 0;
+}
+
+.gold-divider-center {
+  margin-left: auto;
+  margin-right: auto;
+}
